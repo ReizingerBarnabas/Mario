@@ -30,25 +30,23 @@ namespace Mario
             InitializeComponent();
             input.Focus();
         }
-        public static int marioX = 8;
-        public static int marioY = 5;
-        public static int teknos1X = 8;
-        public static int teknos1Y = 7;
-        public static int teknos2X = 7;
-        public static int teknos2Y = 3;
-        public static int teknos3X = 12;
-        public static int teknos3Y = 7;
-        public static int x = 0;
-        public static int y = 0;
-        public static char[,] palya = new char[9, 18];
-        public static int szamlalo = 0;
-        public static int mt = -200;
-        public static int mb = 30;
-        public static int ml = -1200;
-        public static int mr = 0;
-        Label lab2 = new Label();
-        //SoundPlayer player;
-        TextBlock lab = new TextBlock();
+        private static int marioX = 8;
+        private static int marioY = 5;
+        private static int turtle1X = 8;
+        private static int turtle1Y = 7;
+        private static int turtle2X = 7;
+        private static int turtle2Y = 3;
+        private static int turtle3X = 12;
+        private static int turtle3Y = 7;
+        private static int x = 0;
+        private static int y = 0;
+        private static char[,] field = new char[9, 18];
+        private static int counter = 0;
+        private static int mt = -200;
+        private static int mb = 30;
+        private static int ml = -1200;
+        private static int mr = 0;
+        TextBlock map = new TextBlock();
         Image mario = new Image();
         public async void input_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -71,29 +69,29 @@ namespace Mario
                 }, Application.Current.Dispatcher);
                 BitmapImage myBitmapImage = new BitmapImage();
                 myBitmapImage.BeginInit();
-                myBitmapImage.UriSource = new Uri(@"C:\Users\rbarn\source\repos\Mario\src\mario11.png");
+                myBitmapImage.UriSource = new Uri(System.IO.Path.Combine(Directory.GetCurrentDirectory(), "mario1.png"));
                 mario.Source = myBitmapImage;
                 myBitmapImage.EndInit();
             }
-            int c = 0;
+            d = 0;
             if (input.Text == "a")
             {
                 marioX--;
 
                 _timer3 = new DispatcherTimer(new TimeSpan(0, 0, 0, 0, 10), DispatcherPriority.Normal, delegate
                 {
-                    if (c < 10)
+                    if (d < 10)
                     {
                         Thickness t = mario.Margin;
                         t.Left -= 7;
                         t.Right += 7;
                         mario.Margin = t;
                     }
-                    c++;
+                    d++;
                 }, Application.Current.Dispatcher);
                 BitmapImage myBitmapImage = new BitmapImage();
                 myBitmapImage.BeginInit();
-                myBitmapImage.UriSource = new Uri(@"C:\Users\rbarn\source\repos\Mario\src\mario22.png");
+                myBitmapImage.UriSource = new Uri(System.IO.Path.Combine(Directory.GetCurrentDirectory(), "mario2.png"));
                 mario.Source = myBitmapImage;
                 myBitmapImage.EndInit();
             }
@@ -104,7 +102,7 @@ namespace Mario
                 TimeSpan _time;
 
                 Thickness t = mario.Margin;
-                if (palya[marioY - 1, marioX] == ' ')
+                if (field[marioY - 1, marioX] == ' ')
                 {
                     _timer3 = new DispatcherTimer(new TimeSpan(0, 0, 0, 0, 10), DispatcherPriority.Normal, delegate
                     {
@@ -126,7 +124,7 @@ namespace Mario
                     }, Application.Current.Dispatcher);
                 }
 
-                if (palya[marioY - 1, marioX] != ' ')
+                if (field[marioY - 1, marioX] != ' ')
                 {
                     marioY -= 2;
 
@@ -144,7 +142,7 @@ namespace Mario
                 }
             }
             //visszaesik
-            if (palya[marioY + 1, marioX] == ' ')
+            if (field[marioY + 1, marioX] == ' ')
             {
                 marioY += 2;
                 //if (palya[marioY - 1, marioX] != ' ')
@@ -187,7 +185,7 @@ namespace Mario
                 }, Application.Current.Dispatcher);
             }
             input.Text = "";
-            lab.Text = "";
+            map.Text = "";
             for (int k = 0; k < 9; k++)
             {
                 for (int l = 0; l < 18; l++)
@@ -195,92 +193,63 @@ namespace Mario
                     if (k == marioY)
                     {
                         if (l == marioX)
-                            lab.Text += "O";
+                            map.Text += "O";
                         if (l != marioX)
-                            lab.Text += palya[k, l].ToString();
+                            map.Text += field[k, l].ToString();
                     }
-                    if (k != marioY) lab.Text += palya[k, l].ToString();
+                    if (k != marioY) map.Text += field[k, l].ToString();
                 }
-                lab.Text += "\r\n";
+                map.Text += "\r\n";
             }
-            szamlalo++;
+            counter++;
         }
-        private void Beolvas()
+
+        public void CreateBlokk(string blokk)
         {
-            StreamReader olvas = new StreamReader(@"C:\Users\rbarn\source\repos\Mario\src\palya.txt");
-            string elemek = "";
+            Image image = new Image();
+            stp.Children.Add(image);
+            image.Height = 70;
+            image.Width = 70;
+            Thickness thickness = image.Margin;
+            thickness.Left = ml;
+            thickness.Top = mt;
+            thickness.Right = mr;
+            thickness.Bottom = mb;
+            image.Margin = thickness;
+            BitmapImage myBitmapImage = new BitmapImage();
+            myBitmapImage.BeginInit();
+            myBitmapImage.UriSource = new Uri(System.IO.Path.Combine(Directory.GetCurrentDirectory(), blokk+".png"));
+            myBitmapImage.EndInit();
+            image.Source = myBitmapImage;
+            i++;
+        }
+
+        public void Read()
+        {
+            StreamReader olvas = new StreamReader(System.IO.Path.Combine(Directory.GetCurrentDirectory(), "field.txt"));
+            string elements = "";
 
             int i = 0;
-            int j = 0;
             y = 0;
             x = 0;
             while (!olvas.EndOfStream)
             {
-                elemek = olvas.ReadLine();
+                elements = olvas.ReadLine();
                 x = 0;
-                foreach (char elem in elemek)
+                foreach (char item in elements)
                 {
-                    palya[y, x] = elem;
-                    if (elem == 'W')
+                    field[y, x] = item;
+                    if (item == 'W')
                     {
-                        Image image = new Image();
-                        stp.Children.Add(image);
-                        image.Height = 70;
-                        image.Width = 70;
-                        Thickness thickness = image.Margin;
-                        thickness.Left = ml;
-                        thickness.Top = mt;
-                        thickness.Right = mr;
-                        thickness.Bottom = mb;
-                        image.Margin = thickness;
-                        BitmapImage myBitmapImage = new BitmapImage();
-                        myBitmapImage.BeginInit();
-                        myBitmapImage.UriSource = new Uri(@"C:\Users\rbarn\source\repos\Mario\src\tegla.png");
-                        image.Source = myBitmapImage;
-                        myBitmapImage.EndInit();
-                        //image.Name = "tegla" + i;
-                        i++;
+                        CreateBlokk("block");
                     }
-                    if (elem == 'M')
+                    if (item == 'M')
                     {
-                        Image image = new Image();
-                        stp.Children.Add(image);
-                        image.Height = 70;
-                        image.Width = 70;
-                        Thickness thickness = image.Margin;
-                        thickness.Left = ml;
-                        thickness.Top = mt;
-                        thickness.Right = mr;
-                        thickness.Bottom = mb;
-                        image.Margin = thickness;
-                        BitmapImage myBitmapImage = new BitmapImage();
-                        myBitmapImage.BeginInit();
-                        myBitmapImage.UriSource = new Uri(@"C:\Users\rbarn\source\repos\Mario\src\tegla2.png");
-                        image.Source = myBitmapImage;
-                        myBitmapImage.EndInit();
-                        //image.Name = "teglaM" + i;
-                        i++;
+                        CreateBlokk("block2");
                     }
-                    if (elem == '?')
+                    if (item == '?')
                     {
-                        Image image = new Image();
-                        stp.Children.Add(image);
-                        image.Height = 70;
-                        image.Width = 70;
-                        Thickness thickness = image.Margin;
-                        thickness.Left = ml;
-                        thickness.Top = mt;
-                        thickness.Right = mr;
-                        thickness.Bottom = mb;
-                        image.Margin = thickness;
-                        BitmapImage myBitmapImage = new BitmapImage();
-                        myBitmapImage.BeginInit();
-                        myBitmapImage.UriSource = new Uri(@"C:\Users\rbarn\source\repos\Mario\src\kerdojel.png");
-                        image.Source = myBitmapImage;
-                        myBitmapImage.EndInit();
-                        //image.Name = "kerdojel" + j;
-
-                        j++;
+                        CreateBlokk("question");
                     }
                     ml += 140;
 
@@ -293,42 +262,40 @@ namespace Mario
             }
             olvas.Close();
         }
-        private void play_Click(object sender, RoutedEventArgs e)
+        public void play_Click(object sender, RoutedEventArgs e)
         {
-            _ = TeknosMozgasa();
+            _ = Move();
+            initializeFieldAndCharacters();
+        }
+
+        public void initializeFieldAndCharacters()
+        {
             marioXX.Height = 70;
             play.Height = 0;
-            teknos.Height = 70;
-            teknos2.Height = 70;
-            teknos3.Height = 70;
+            turtle.Height = 70;
+            turtle2.Height = 70;
+            turtle3.Height = 70;
             input.Focus();
-            Beolvas();
+            Read();
             stp.Children.Add(mario);
             mario.Height = 70;
-            BitmapImage myBitmapImage2 = new BitmapImage();
-            myBitmapImage2.BeginInit();
-            myBitmapImage2.UriSource = new Uri(@"C:\Users\rbarn\source\repos\Mario\src\mario11.png");
-            mario.Source = myBitmapImage2;
-            Thickness marioMargo = mario.Margin;
-            marioMargo.Left = 0;
-            marioMargo.Top = -280;
-            marioMargo.Right = 70;
-            marioMargo.Bottom = -755;
-            mario.Margin = marioMargo;
-            //player = new SoundPlayer(@"E:\repos\Mario's World Game\Sources\Super Mario Bros. Theme Song.wav");
-            //player.Play();
-            stp.Children.Add(lab);
-            stp.Children.Add(lab2);
-            //kep.Height = 0;
-            lab.FontFamily = new FontFamily("Courier New");
-            lab.FontSize = 10;
-            lab.MaxHeight = 115;
-            lab.Width = 115;
-            lab.Background = Brushes.White;
-            Thickness labm = lab.Margin;
+            mario.Source = addBitmapImage("mario1");
+            Thickness marioMargin = mario.Margin;
+            marioMargin.Left = 0;
+            marioMargin.Top = -280;
+            marioMargin.Right = 70;
+            marioMargin.Bottom = -755;
+            mario.Margin = marioMargin;
+            stp.Children.Add(map);
+            map.FontFamily = new FontFamily("Courier New");
+            map.FontSize = 10;
+            map.MaxHeight = 115;
+            map.Width = 115;
+            map.Background = Brushes.White;
+            Thickness labm = map.Margin;
             labm.Left = -1250;
             labm.Top = -280;
-            lab.Margin = labm;
+            map.Margin = labm;
             for (int k = 0; k < 9; k++)
             {
                 for (int l = 0; l < 18; l++)
@@ -336,56 +303,65 @@ namespace Mario
                     if (k == marioY)
                     {
                         if (l == marioX)
-                            lab.Text += "O";
+                            map.Text += "O";
                         if (l != marioX)
-                            lab.Text += palya[k, l].ToString();
+                            map.Text += field[k, l].ToString();
                     }
-                    if (k != marioY) lab.Text += palya[k, l].ToString();
+                    if (k != marioY) map.Text += field[k, l].ToString();
                 }
-                lab.Text += "\r\n";
+                map.Text += "\r\n";
             }
         }
-        public int i = 0;
-        public async Task TeknosMozgasa()
-        {
-            //for (int i = 0; i < 10; i++)
-            {
-                DispatcherTimer _timer;
 
-                TimeSpan _time;
-                _time = new TimeSpan(0, 0, 6);
+        private int i = 0;
+
+        private BitmapImage addBitmapImage(string key)
+        {
+            BitmapImage myBitmapImage = new BitmapImage();
+            myBitmapImage.BeginInit();
+            myBitmapImage.UriSource = new Uri(System.IO.Path.Combine(Directory.GetCurrentDirectory(), key+".png"));
+            myBitmapImage.EndInit();
+            return myBitmapImage;
+        }
+
+        private void Die()
+        {
+            if ((marioX == turtle2X && marioY == turtle2Y) || (marioX == turtle1X && marioY == turtle1Y) || (marioX == turtle3X && marioY == turtle3Y))
+            {
+                Thickness position = mario.Margin;
+                position.Top = -280;
+                position.Bottom = -755;
+                position.Left = 0;
+                position.Right = 70;
+                mario.Margin = position;
+                marioX = 8;
+                marioY = 5;
+            }
+        }
+
+        private async Task Move()
+        {
+                DispatcherTimer _timer;
                 _timer = new DispatcherTimer(new TimeSpan(0, 0, 0, 0, 10), DispatcherPriority.Normal, delegate
                 {
-                    Thickness m = teknos.Margin;
-                    Thickness m2 = teknos2.Margin;
-                    Thickness m3 = teknos3.Margin;
+                    Thickness m = turtle.Margin;
+                    Thickness m2 = turtle2.Margin;
+                    Thickness m3 = turtle3.Margin;
                     if (i < 301)
                     {
                         m.Left -= 1;
                         m.Right += 1;
-                        BitmapImage myBitmapImage = new BitmapImage();
-                        myBitmapImage.BeginInit();
-                        myBitmapImage.UriSource = new Uri(@"C:\Users\rbarn\source\repos\Mario\src\teknos.png");
-                        teknos.Source = myBitmapImage;
-                        myBitmapImage.EndInit();
+                        turtle.Source = addBitmapImage("turtle");
                         m2.Left += 1;
                         m2.Right -= 1;
                         if (m2.Left % 70 == 0)
                         {
-                            teknos2X++;
-                            teknos1X--;
-                            teknos3X--;
+                            turtle2X++;
+                            turtle1X--;
+                            turtle3X--;
                         }
-                        BitmapImage myBitmapImage2 = new BitmapImage();
-                        myBitmapImage2.BeginInit();
-                        myBitmapImage2.UriSource = new Uri(@"C:\Users\rbarn\source\repos\Mario\src\teknos2.png");
-                        teknos2.Source = myBitmapImage2;
-                        myBitmapImage2.EndInit();
-                        BitmapImage myBitmapImage3 = new BitmapImage();
-                        myBitmapImage3.BeginInit();
-                        myBitmapImage3.UriSource = new Uri(@"C:\Users\rbarn\source\repos\Mario\src\teknos.png");
-                        teknos3.Source = myBitmapImage3;
-                        myBitmapImage3.EndInit();
+                        turtle2.Source = addBitmapImage("turtle2");
+                        turtle3.Source = addBitmapImage("turtle");
                         m3.Left -= 1;
                         m3.Right += 1;
                     }
@@ -393,56 +369,30 @@ namespace Mario
                     {
                         m.Left += 1;
                         m.Right -= 1;
-                        BitmapImage myBitmapImage = new BitmapImage();
-                        myBitmapImage.BeginInit();
-                        myBitmapImage.UriSource = new Uri(@"C:\Users\rbarn\source\repos\Mario\src\teknos2.png");
-                        teknos.Source = myBitmapImage;
-                        myBitmapImage.EndInit();
+                        turtle.Source = addBitmapImage("turtle2");
                         if (i == 600) i = 0;
                         m2.Left -= 1;
                         m2.Right += 1;
                         if (m2.Left % 70 == 0)
                         {
-                            teknos2X--;
-                            teknos1X++;
-                            teknos3X++;
+                            turtle2X--;
+                            turtle1X++;
+                            turtle3X++;
                         }
-                        BitmapImage myBitmapImage2 = new BitmapImage();
-                        myBitmapImage2.BeginInit();
-                        myBitmapImage2.UriSource = new Uri(@"C:\Users\rbarn\source\repos\Mario\src\teknos.png");
-                        teknos2.Source = myBitmapImage2;
-                        myBitmapImage2.EndInit();
-                        if (i == 600) i = 0;
-                        BitmapImage myBitmapImage3 = new BitmapImage();
-                        myBitmapImage3.BeginInit();
-                        myBitmapImage3.UriSource = new Uri(@"C:\Users\rbarn\source\repos\Mario\src\teknos2.png");
-                        teknos3.Source = myBitmapImage3;
-                        myBitmapImage3.EndInit();
-                        if (i == 600) i = 0;
+                        turtle2.Source = addBitmapImage("turtle");
+                        turtle3.Source = addBitmapImage("turtle2");
                         m3.Left += 1;
                         m3.Right -= 1;
                     }
-                    teknos.Margin = m;
-                    teknos2.Margin = m2;
-                    teknos3.Margin = m3;
-                    //meghal
-                    if ((marioX == teknos2X && marioY == teknos2Y) || (marioX == teknos1X && marioY == teknos1Y) || (marioX == teknos3X && marioY == teknos3Y))
+                    turtle.Margin = m;
+                    turtle2.Margin = m2;
+                    turtle3.Margin = m3;
+                    if ((marioX == turtle2X && marioY == turtle2Y) || (marioX == turtle1X && marioY == turtle1Y) || (marioX == turtle3X && marioY == turtle3Y))
                     {
-                        Thickness mariopozicio = mario.Margin;
-                        mariopozicio.Top = -280;
-                        mariopozicio.Bottom = -755;
-                        mariopozicio.Left = 0;
-                        mariopozicio.Right = 70;
-                        mario.Margin = mariopozicio;
-                        marioX = 8;
-                        marioY = 5;
-                        //player.Stop();
-                        //player.Play();
+                        Die();
                     }
                     i++;
-                    _time = _time.Add(TimeSpan.FromSeconds(-1));
                 }, Application.Current.Dispatcher);
-            }
         }
     }
 }

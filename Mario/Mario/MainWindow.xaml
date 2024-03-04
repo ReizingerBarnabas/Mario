@@ -13,9 +13,9 @@
             <!--<Image Name="kep" Source="E:\repos\Mario's World Game\Sources\Tooschee-Water-Gaming-Mario-party.ico" Margin="0,50,0,0" Height="150" Width="150"/>-->
             <Button x:Name="play" Content="PLAY" Width="100" Height="40" Margin="0,200,0,0" Background="#FFFFDC00" Foreground="#FF243AC7" Click="play_Click"/>
 
-            <Image x:Name="teknos" Source="C:\Users\rbarn\source\repos\Mario\src\teknos.png" Height="0" Margin="-50,0,0,-760"/>
-            <Image x:Name="teknos2" Source="C:\Users\rbarn\source\repos\Mario\src\teknos.png" Height="0" Margin="-250,-560,0,-755"/>
-            <Image x:Name="teknos3" Source="C:\Users\rbarn\source\repos\Mario\src\teknos.png" Height="0" Margin="400,0,-100,-760"/>
+            <Image x:Name="turtle" Source="C:\Users\rbarn\source\repos\Mario\src\turtle.png" Height="0" Margin="-50,0,0,-760"/>
+            <Image x:Name="turtle2" Source="C:\Users\rbarn\source\repos\Mario\src\turtle2.png" Height="0" Margin="-250,-560,0,-755"/>
+            <Image x:Name="turtle3" Source="C:\Users\rbarn\source\repos\Mario\src\turtle3.png" Height="0" Margin="400,0,-100,-760"/>
             <Image x:Name="marioXX" Source="C:\Users\rbarn\source\repos\Mario\src\mario11.png" Height="0" Margin="0,-280,70,-755"/>
             <!--<Label FontSize="8" Content="" Name="label" Width="163" Height="100" Margin="600,100,0,0" Background="White" />-->
         </StackPanel>
