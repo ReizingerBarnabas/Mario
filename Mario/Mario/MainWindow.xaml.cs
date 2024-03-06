@@ -394,5 +394,11 @@ namespace Mario
                     i++;
                 }, Application.Current.Dispatcher);
         }
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            // Eseménykezelő logika, amely bezárja az ablakot
+            //Close();
+            Application.Current.Shutdown();
+        }
     }
 }

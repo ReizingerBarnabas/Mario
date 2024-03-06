@@ -5,18 +5,68 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Mario"
         mc:Ignorable="d"
-        Title="Mario's World Game" Height="450" Width="800" WindowState="Maximized">
-    <Grid Background="#FF57CCE6">
+        Background="#FF57CCE6"
+        FontFamily="Consolas"
+        FontSize="20"
+        Title="Mario's World Game" Height="450" Width="800" WindowState="Maximized" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Grid Margin="10">
+        
+        <!-- TOP MENU -->
+        <Grid Height="30"
+              VerticalAlignment="Top">
+            <!-- COLUMS -->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            
+            <!-- EXIT BUTTON -->
+            <Button x:Name="BtnClose"
+                    Grid.Column="0"
+                    Style="{StaticResource ControlButton}"
+                    Click="btnClose_Click"
+                    Content="EXIT">
+            </Button>
+            
+            
+            <!-- FIRST COLUMN - TIME -->
+            <TextBlock x:Name="TimeDisplay"
+                       Grid.Column="1"
+                       >IDŐ: 00:00</TextBlock>
+            
+            <!-- SECOND COLUMN - COINS -->
+            <TextBlock x:Name="CoinDisplay"
+                       Grid.Column="2"
+                       >COIN: 0</TextBlock>
+            
+            <!-- THIRD COLUMN - LIVES -->
+            <TextBlock x:Name="LivesDisplay"
+                       Grid.Column="4"
+                       >LIVES: 3</TextBlock>
+            
+            
+        </Grid>
+        
+        
+        
         <TextBox Name="input" Height="0"  Width="100" Margin="115,32,585,352" TextChanged="input_TextChanged"/>
         <!--<Image Name="tegla14" Source="E:\repos\Mario's World Game\Sources\tegla.png" Height="70" Margin="650,0,0,140"/>-->
         <StackPanel Name="stp">
             <!--<Image Name="kep" Source="E:\repos\Mario's World Game\Sources\Tooschee-Water-Gaming-Mario-party.ico" Margin="0,50,0,0" Height="150" Width="150"/>-->
-            <Button x:Name="play" Content="PLAY" Width="100" Height="40" Margin="0,200,0,0" Background="#FFFFDC00" Foreground="#FF243AC7" Click="play_Click"/>
+            <Button x:Name="play" 
+                    Content="PLAY" 
+                    Style="{StaticResource ControlButton}"
+                    Width="100" 
+                    Height="40" 
+                    Margin="0,200,0,0"  
+                    Click="play_Click"/>
 
-            <Image x:Name="turtle" Source="C:\Users\rbarn\source\repos\Mario\src\turtle.png" Height="0" Margin="-50,0,0,-760"/>
-            <Image x:Name="turtle2" Source="C:\Users\rbarn\source\repos\Mario\src\turtle2.png" Height="0" Margin="-250,-560,0,-755"/>
-            <Image x:Name="turtle3" Source="C:\Users\rbarn\source\repos\Mario\src\turtle3.png" Height="0" Margin="400,0,-100,-760"/>
-            <Image x:Name="marioXX" Source="C:\Users\rbarn\source\repos\Mario\src\mario11.png" Height="0" Margin="0,-280,70,-755"/>
+            <Image x:Name="turtle" Height="0" Margin="-50,0,0,-760"/>
+            <Image x:Name="turtle2" Height="0" Margin="-250,-560,0,-755"/>
+            <Image x:Name="turtle3" Height="0" Margin="400,0,-100,-760"/>
+            <Image x:Name="marioXX" Height="0" Margin="0,-280,70,-755"/>
             <!--<Label FontSize="8" Content="" Name="label" Width="163" Height="100" Margin="600,100,0,0" Background="White" />-->
         </StackPanel>
     </Grid>
