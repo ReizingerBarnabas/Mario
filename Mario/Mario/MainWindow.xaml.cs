@@ -29,6 +29,12 @@ namespace Mario
         {
             InitializeComponent();
             input.Focus();
+            
+            // UserControl bezárásának eseménykezelője
+            Menu.CloseRequested += (sender, e) =>
+            {
+                Menu.Visibility = Visibility.Hidden; // UserControl elrejtése
+            };
         }
         private static int marioX = 8;
         private static int marioY = 5;
@@ -404,7 +410,7 @@ namespace Mario
         {
             Menu.Visibility = Visibility.Visible;
         }
-        private void btnBackToGame_Click(object sender, RoutedEventArgs e)
+        public void backToGame_Click(object sender, RoutedEventArgs e)
         {
             Menu.Visibility = Visibility.Hidden;
         }

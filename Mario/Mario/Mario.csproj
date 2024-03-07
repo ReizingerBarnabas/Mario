@@ -15,4 +15,8 @@
     <Resource Include="teknos2.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ViewModel\" />
+  </ItemGroup>
+
 </Project>

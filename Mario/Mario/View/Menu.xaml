@@ -1,0 +1,56 @@
+<UserControl x:Class="Mario.View.Menu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:Mario.View"
+             mc:Ignorable="d"
+             d:DesignHeight="auto" d:DesignWidth="250">
+        
+        <!-- Set panel to transparent -->
+        <UserControl.Background>
+                <SolidColorBrush Color="Transparent"/>
+        </UserControl.Background>
+        
+        
+        <Border Background="{StaticResource PrimaryBgColor}"
+                BorderBrush="{StaticResource ThirdlyBtnColor}"
+                BorderThickness="2"
+                CornerRadius="7">
+            <Grid>
+            
+                <StackPanel>
+                    <Button x:Name="BackToGame"
+                            Content="BACK TO GAME"
+                            Style="{StaticResource ControlButton}"
+                            Click="btnBackToGame_Click"/>
+
+                    <Button x:Name="Settings"
+                            Content="SETTINGS"
+                            Style="{StaticResource ControlButton}"/>
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Center">
+                        <Button x:Name="VolumeBtnMute"
+                                Content="MUTE"
+                                Width="50"
+                                Style="{StaticResource ControlButton}"/>
+                        <Button x:Name="VolumeBtnPlus"
+                                Content="+"
+                                Width="30"
+                                Style="{StaticResource ControlButton}"/>
+                        <Button x:Name="VolumeBtnMinus"
+                                Content="-"
+                                Width="30"
+                                Style="{StaticResource ControlButton}"/>
+                    </StackPanel>
+                    <Button x:Name="BtnClose"
+                            Content="EXIT"
+                            Click="btnClose_Click"
+                            Style="{StaticResource ControlButton}"/>
+                </StackPanel>
+
+
+            </Grid>
+        </Border>
+        
+</UserControl>

@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:usercontrols="clr-namespace:Mario.View"
         xmlns:local="clr-namespace:Mario"
         mc:Ignorable="d"
         Background="#FF57CCE6"
@@ -50,52 +51,14 @@
         </Grid>
         
         <!-- MENU -->
-        <Grid x:Name="Menu" 
-              HorizontalAlignment="Center"
-              VerticalAlignment="Center"
-              Visibility="Hidden"
-              Background="{StaticResource PrimaryBgColor}">
-
-            <!--<Grid.BorderBrush>
-                <SolidColorBrush Color="{StaticResource ThirdlyBtnColor}"/>
-            </Grid.BorderBrush>-->
-
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="250"/>
-            </Grid.ColumnDefinitions>
-            
-            
-            <StackPanel>
-                <Button x:Name="BackToGame"
-                    Content="BACK TO GAME"
-                    Style="{StaticResource ControlButton}"
-                        Click="btnBackToGame_Click"/>
-
-                <Button x:Name="Settings"
-                    Content="SETTINGS"
-                    Style="{StaticResource ControlButton}"/>
-                <StackPanel Orientation="Horizontal"
-                            HorizontalAlignment="Center">
-                    <Button x:Name="VolumeBtnMute"
-                            Content=" MUTE "
-                            Style="{StaticResource ControlButton}"/>
-                    <Button x:Name="VolumeBtnPlus"
-                            Content=" + "
-                            Style="{StaticResource ControlButton}"/>
-                    <Button x:Name="VolumeBtnMinus"
-                            Content=" - "
-                            Style="{StaticResource ControlButton}"/>
-                </StackPanel>
-                <Button x:Name="btnClose"
-                    Content="EXIT"
-                        Click="btnClose_Click"
-                    Style="{StaticResource ControlButton}"/>
-            </StackPanel>
-
-            
-
-
-        </Grid>
+        <usercontrols:Menu x:Name="Menu"
+                           Width="250"
+                           Height="Auto"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           Panel.ZIndex="100"
+                           Visibility="Hidden">
+        </usercontrols:Menu>
         
         
         
