@@ -400,5 +400,13 @@ namespace Mario
             //Close();
             Application.Current.Shutdown();
         }
+        private void btnMenu_Click(object sender, RoutedEventArgs e)
+        {
+            Menu.Visibility = Visibility.Visible;
+        }
+        private void btnBackToGame_Click(object sender, RoutedEventArgs e)
+        {
+            Menu.Visibility = Visibility.Hidden;
+        }
     }
 }

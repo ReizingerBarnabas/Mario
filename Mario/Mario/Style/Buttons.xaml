@@ -3,7 +3,9 @@
     <!-- Main -->
     <Style x:Key="ControlButton" TargetType="Button">
         <Setter Property="Cursor" Value="Hand"/>
-        
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Margin" Value="3"/>
+
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">

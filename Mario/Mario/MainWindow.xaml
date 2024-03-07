@@ -22,15 +22,15 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             
-            <!-- EXIT BUTTON -->
-            <Button x:Name="BtnClose"
+            <!-- MENU BUTTON -->
+            <Button x:Name="BtnMenu"
                     Grid.Column="0"
                     Style="{StaticResource ControlButton}"
-                    Click="btnClose_Click"
-                    Content="EXIT">
-            </Button>
+                    Click="btnMenu_Click"
+                    Content="MENU"/>
             
-            
+
+
             <!-- FIRST COLUMN - TIME -->
             <TextBlock x:Name="TimeDisplay"
                        Grid.Column="1"
@@ -47,6 +47,54 @@
                        >LIVES: 3</TextBlock>
             
             
+        </Grid>
+        
+        <!-- MENU -->
+        <Grid x:Name="Menu" 
+              HorizontalAlignment="Center"
+              VerticalAlignment="Center"
+              Visibility="Hidden"
+              Background="{StaticResource PrimaryBgColor}">
+
+            <!--<Grid.BorderBrush>
+                <SolidColorBrush Color="{StaticResource ThirdlyBtnColor}"/>
+            </Grid.BorderBrush>-->
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250"/>
+            </Grid.ColumnDefinitions>
+            
+            
+            <StackPanel>
+                <Button x:Name="BackToGame"
+                    Content="BACK TO GAME"
+                    Style="{StaticResource ControlButton}"
+                        Click="btnBackToGame_Click"/>
+
+                <Button x:Name="Settings"
+                    Content="SETTINGS"
+                    Style="{StaticResource ControlButton}"/>
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center">
+                    <Button x:Name="VolumeBtnMute"
+                            Content=" MUTE "
+                            Style="{StaticResource ControlButton}"/>
+                    <Button x:Name="VolumeBtnPlus"
+                            Content=" + "
+                            Style="{StaticResource ControlButton}"/>
+                    <Button x:Name="VolumeBtnMinus"
+                            Content=" - "
+                            Style="{StaticResource ControlButton}"/>
+                </StackPanel>
+                <Button x:Name="btnClose"
+                    Content="EXIT"
+                        Click="btnClose_Click"
+                    Style="{StaticResource ControlButton}"/>
+            </StackPanel>
+
+            
+
+
         </Grid>
         
         
