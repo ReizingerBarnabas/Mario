@@ -49,7 +49,7 @@
             
             
         </Grid>
-        
+
         <!-- MENU -->
         <usercontrols:Menu x:Name="Menu"
                            Width="250"
@@ -59,14 +59,12 @@
                            Panel.ZIndex="100"
                            Visibility="Hidden">
         </usercontrols:Menu>
+
         
-        
-        
+         
         <TextBox Name="input" Height="0"  Width="100" Margin="115,32,585,352" TextChanged="input_TextChanged"/>
-        <!--<Image Name="tegla14" Source="E:\repos\Mario's World Game\Sources\tegla.png" Height="70" Margin="650,0,0,140"/>-->
         <StackPanel Name="stp">
-            <!--<Image Name="kep" Source="E:\repos\Mario's World Game\Sources\Tooschee-Water-Gaming-Mario-party.ico" Margin="0,50,0,0" Height="150" Width="150"/>-->
-            <Button x:Name="play" 
+             <Button x:Name="play" 
                     Content="PLAY" 
                     Style="{StaticResource ControlButton}"
                     Width="100" 
@@ -74,11 +72,12 @@
                     Margin="0,200,0,0"  
                     Click="play_Click"/>
 
-            <Image x:Name="turtle" Height="0" Margin="-50,0,0,-760"/>
-            <Image x:Name="turtle2" Height="0" Margin="-250,-560,0,-755"/>
-            <Image x:Name="turtle3" Height="0" Margin="400,0,-100,-760"/>
-            <Image x:Name="marioXX" Height="0" Margin="0,-280,70,-755"/>
-            <!--<Label FontSize="8" Content="" Name="label" Width="163" Height="100" Margin="600,100,0,0" Background="White" />-->
-        </StackPanel>
+            <Image x:Name="turtle1" Height="0" Margin="-400,-840,0,-755"/>
+            <Image x:Name="turtle2" Height="0"  Margin="-50,-560,0,-755"/>
+            <Image x:Name="turtle3" Height="0" Margin="400,-280,-100,-755"/>
+            <Image x:Name="turtle4" Height="0" Margin="-400,0,-0,-755"/>
+            <Image x:Name="turtle5" Height="0" Margin="400,280,-100,-755"/>
+            <Image x:Name="marioXX" Height="0" Margin="0,560,70,-755"/>
+            </StackPanel>
     </Grid>
 </Window>
