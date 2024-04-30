@@ -11,11 +11,22 @@
         FontSize="20"
         Title="Mario's World Game" Height="450" Width="800" WindowState="Maximized" WindowStartupLocation="CenterScreen" WindowStyle="None">
     <Grid>
+        <!-- MENU BUTTON -->
+        <Button x:Name="BtnMenu"
+                Width="80"
+                Style="{StaticResource ControlButton}"
+                Click="btnMenu_Click"
+                Content="MENU"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Panel.ZIndex="200"
+                Margin="10"/>
         
         <!-- TOP MENU -->
-        <Grid Height="36"
+        <Grid Height="30"
               VerticalAlignment="Top"
-              Margin="10">
+              Margin="10"
+              Panel.ZIndex="100">
             <!-- COLUMS -->
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -24,15 +35,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             
-            <!-- MENU BUTTON -->
-            <Button x:Name="BtnMenu"
-                    Grid.Column="0"
-                    Width="80"
-                    Style="{StaticResource ControlButton}"
-                    Click="btnMenu_Click"
-                    Content="MENU"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Top"/>
+            
             
 
 
@@ -60,13 +63,13 @@
                            Height="Auto"
                            VerticalAlignment="Center"
                            HorizontalAlignment="Center"
-                           Panel.ZIndex="100"
+                           Panel.ZIndex="200"
                            Visibility="Hidden">
         </usercontrols:Menu>
         
         
         <Grid Background="{StaticResource Cover}"
-              Panel.ZIndex="-100"
+              Panel.ZIndex="150"
               x:Name="StartScreen">
             
             <Grid.RowDefinitions>
@@ -90,7 +93,8 @@
                     Grid.Column="1"
                     Grid.Row="3"
                     FontSize="36"
-                    FontWeight="Bold">
+                    FontWeight="Bold"
+                    Panel.ZIndex="180">
                 <Button.RenderTransform>
                     <TranslateTransform Y="200" /> <!-- Előre elmozdítjuk a gombot 100 pixellel -->
                 </Button.RenderTransform>
@@ -109,7 +113,8 @@
             <!-- MARIO felirat -->
             <Image Source="{StaticResource Title}" HorizontalAlignment="Center" VerticalAlignment="Bottom"
                    Grid.Column="1" Grid.Row="1"
-                   Height="300">
+                   Height="300"
+                   Panel.ZIndex="180">
                 <Image.RenderTransform>
                     <TranslateTransform Y="100" /> <!-- Előre elmozdítjuk a képet 100 pixellel -->
                 </Image.RenderTransform>

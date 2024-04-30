@@ -25,6 +25,8 @@ namespace Mario
     /// </summary>
     public partial class MainWindow : Window
     {
+        private DispatcherTimer timer;
+        private TimeSpan elapsedTime;
         public MainWindow()
         {
             InitializeComponent();
@@ -35,6 +37,10 @@ namespace Mario
             {
                 Menu.Visibility = Visibility.Hidden; // UserControl elrejtése
             };
+            // Inicializálás
+            timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(1); // Minden másodpercben frissít
+            timer.Tick += Timer_Tick;
         }
         private static int marioX = 8;
         private static int marioY = 5;
@@ -276,6 +282,22 @@ namespace Mario
         {
             _ = Move();
             initializeFieldAndCharacters();
+            StartTimer();
+        }
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            // Minden tick eseménynél növeljük az eltelt időt
+            elapsedTime = elapsedTime.Add(TimeSpan.FromSeconds(1));
+        
+            // Frissítjük a TextBlock szövegét
+            TimeDisplay.Text = $"IDŐ: {elapsedTime.Minutes:D2}:{elapsedTime.Seconds:D2}";
+        }
+
+        public void StartTimer()
+        {
+            // Indítsd el az időzítőt és nullázd az eltelt időt
+            elapsedTime = TimeSpan.Zero;
+            timer.Start(); // A timer elkezd számolni
         }
 
         public void initializeFieldAndCharacters()

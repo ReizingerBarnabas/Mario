@@ -7,44 +7,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f69d614-54fb-4df1-8aa8-02d8eb35ff3a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Mario/Images/felirat.png" afterDir="false" />
+    <list default="true" id="3f69d614-54fb-4df1-8aa8-02d8eb35ff3a" name="Changes" comment="Borítókép, felirat és egy kis animáció beszúrása a kezdőképernyőre">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mario/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mario/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mario/App.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/App.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mario/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/MainWindow.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mario/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/MainWindow.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mario/Mario.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/Mario.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mario/bin/Debug/net6.0-windows/Mario.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/bin/Debug/net6.0-windows/Mario.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mario/bin/Debug/net6.0-windows/Mario.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/bin/Debug/net6.0-windows/Mario.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mario/bin/Debug/net6.0-windows/Mario.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/bin/Debug/net6.0-windows/Mario.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/App.baml" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/App.baml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/App.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/App.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/GeneratedInternalTypeHelper.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/GeneratedInternalTypeHelper.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/MainWindow.baml" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/MainWindow.baml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/MainWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/MainWindow.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario.g.resources" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario.g.resources" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario.genruntimeconfig.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario_MarkupCompile.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario_MarkupCompile.i.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario_MarkupCompile.i.lref" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario_MarkupCompile.lref" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/View/Menu.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/View/Menu.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/ref/Mario.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/ref/Mario.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/refint/Mario.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/refint/Mario.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mario/obj/Mario.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/Mario.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mario/obj/Mario.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/Mario.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mario/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mario/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mario/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mario/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,8 +111,25 @@
       <option name="presentableId" value="Default" />
       <updated>1709844262298</updated>
       <workItem from="1709844264696" duration="5194000" />
-      <workItem from="1714507648675" duration="2552000" />
+      <workItem from="1714507648675" duration="3182000" />
     </task>
+    <task id="LOCAL-00001" summary="Borító kép, felirat és egy kis animáció beszúrása, a kezdőképernyőre">
+      <option name="closed" value="true" />
+      <created>1714510451357</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1714510451357</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Borítókép, felirat és egy kis animáció beszúrása a kezdőképernyőre">
+      <option name="closed" value="true" />
+      <created>1714510538934</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1714510538934</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,5 +139,8 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Borító kép, felirat és egy kis animáció beszúrása, a kezdőképernyőre" />
+    <MESSAGE value="Borítókép, felirat és egy kis animáció beszúrása a kezdőképernyőre" />
+    <option name="LAST_COMMIT_MESSAGE" value="Borítókép, felirat és egy kis animáció beszúrása a kezdőképernyőre" />
   </component>
 </project>
