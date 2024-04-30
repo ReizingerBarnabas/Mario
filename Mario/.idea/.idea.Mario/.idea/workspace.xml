@@ -8,32 +8,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f69d614-54fb-4df1-8aa8-02d8eb35ff3a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Mario/Images/cover.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mario/View/Menu.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mario/View/Menu.xaml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mario/Images/felirat.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Mario/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mario/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mario/App.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/App.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mario/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/MainWindow.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mario/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/MainWindow.xaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mario/Mario.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/Mario.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mario/bin/Debug/net6.0-windows/Mario.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/bin/Debug/net6.0-windows/Mario.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mario/bin/Debug/net6.0-windows/Mario.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/bin/Debug/net6.0-windows/Mario.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mario/bin/Debug/net6.0-windows/Mario.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/bin/Debug/net6.0-windows/Mario.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/App.baml" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/App.baml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/App.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/App.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/GeneratedInternalTypeHelper.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/GeneratedInternalTypeHelper.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/MainWindow.baml" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/MainWindow.baml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/MainWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/MainWindow.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario.csproj.AssemblyReference.cache" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario.g.resources" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario.g.resources" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario.genruntimeconfig.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario_MarkupCompile.cache" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario_MarkupCompile.i.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario_MarkupCompile.i.lref" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/Mario_MarkupCompile.lref" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/View/Menu.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/View/Menu.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/ref/Mario.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/ref/Mario.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/refint/Mario.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/Debug/net6.0-windows/refint/Mario.dll" afterDir="false" />
@@ -41,23 +43,40 @@
       <change beforePath="$PROJECT_DIR$/Mario/obj/Mario.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/Mario.csproj.nuget.g.props" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mario/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mario/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mario/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mario/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Mario/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DpaMonitoringSettings">
+    <option name="autoShow" value="false" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "ZAdam03"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/ReizingerBarnabas/Mario",
+    "accountId": "2fcb38fd-050e-448c-b8f1-fb00c860db0f"
+  }
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Mario/View/Menu.xaml" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2dNMp1KShJCBxqi3RXLJhbjRq6f" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -81,8 +100,8 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\Adam\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Adam\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\Adam\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\Adam\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
       "C:\\Users\\Adam\\AppData\\Local\\Symbols\\src"
     ]
   }
@@ -116,6 +135,7 @@
       <option name="presentableId" value="Default" />
       <updated>1709844262298</updated>
       <workItem from="1709844264696" duration="5194000" />
+      <workItem from="1714507648675" duration="2552000" />
     </task>
     <servers />
   </component>
@@ -123,6 +143,7 @@
     <option name="version" value="3" />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>

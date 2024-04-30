@@ -281,7 +281,8 @@ namespace Mario
         public void initializeFieldAndCharacters()
         {
             marioXX.Height = 70;
-            play.Height = 0;
+            play.Visibility = Visibility.Hidden;
+            StartScreen.Visibility = Visibility.Hidden;
             turtle1.Height = 70;
             // turtle2.Height = 70;
             turtle3.Height = 70;

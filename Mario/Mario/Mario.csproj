@@ -13,6 +13,12 @@
 
   <ItemGroup>
     <Resource Include="teknos2.png" />
+    <None Remove="Images\cover.jpeg" />
+    <Resource Include="Images\cover.jpeg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <None Remove="Images\felirat.png" />
+    <Resource Include="Images\felirat.png" />
   </ItemGroup>
 
   <ItemGroup>

@@ -10,11 +10,12 @@
         FontFamily="Consolas"
         FontSize="20"
         Title="Mario's World Game" Height="450" Width="800" WindowState="Maximized" WindowStartupLocation="CenterScreen" WindowStyle="None">
-    <Grid Margin="10">
+    <Grid>
         
         <!-- TOP MENU -->
-        <Grid Height="30"
-              VerticalAlignment="Top">
+        <Grid Height="36"
+              VerticalAlignment="Top"
+              Margin="10">
             <!-- COLUMS -->
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -26,9 +27,12 @@
             <!-- MENU BUTTON -->
             <Button x:Name="BtnMenu"
                     Grid.Column="0"
+                    Width="80"
                     Style="{StaticResource ControlButton}"
                     Click="btnMenu_Click"
-                    Content="MENU"/>
+                    Content="MENU"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"/>
             
 
 
@@ -59,18 +63,75 @@
                            Panel.ZIndex="100"
                            Visibility="Hidden">
         </usercontrols:Menu>
+        
+        
+        <Grid Background="{StaticResource Cover}"
+              Panel.ZIndex="-100"
+              x:Name="StartScreen">
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" /> <!-- Automatikus magasság -->
+                <RowDefinition Height="Auto" />    <!-- Előre meghatározott arányú magasság -->
+                <RowDefinition Height="Auto" />  <!-- Konkrét pixel méret -->
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            
+            <Button x:Name="play" 
+                    Content="PLAY" 
+                    Style="{StaticResource ControlButton}"
+                    Width="120" 
+                    Height="60" 
+                    Click="play_Click"
+                    Grid.Column="1"
+                    Grid.Row="3"
+                    FontSize="36"
+                    FontWeight="Bold">
+                <Button.RenderTransform>
+                    <TranslateTransform Y="200" /> <!-- Előre elmozdítjuk a gombot 100 pixellel -->
+                </Button.RenderTransform>
+                <Button.Triggers>
+                    <EventTrigger RoutedEvent="Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)"
+                                                 From="100" To="0" Duration="0:0:1" /> <!-- Visszahozzuk a gombot 0 pozícióra -->
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Button.Triggers>
+            </Button>
+            
+            <!-- MARIO felirat -->
+            <Image Source="{StaticResource Title}" HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                   Grid.Column="1" Grid.Row="1"
+                   Height="300">
+                <Image.RenderTransform>
+                    <TranslateTransform Y="100" /> <!-- Előre elmozdítjuk a képet 100 pixellel -->
+                </Image.RenderTransform>
+                <Image.Triggers>
+                    <EventTrigger RoutedEvent="Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)"
+                                                 From="100" To="0" Duration="0:0:1" /> <!-- Visszahozzuk a képet 0 pozícióra -->
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Image.Triggers>
+            </Image>
+            
+        </Grid>
 
         
          
         <TextBox Name="input" Height="0"  Width="100" Margin="115,32,585,352" TextChanged="input_TextChanged"/>
         <StackPanel Name="stp">
-             <Button x:Name="play" 
-                    Content="PLAY" 
-                    Style="{StaticResource ControlButton}"
-                    Width="100" 
-                    Height="40" 
-                    Margin="0,200,0,0"  
-                    Click="play_Click"/>
+             
 
             <Image x:Name="turtle1" Height="0" Margin="-400,-840,0,-755"/>
             <Image x:Name="turtle2" Height="0"  Margin="-50,-560,0,-755"/>

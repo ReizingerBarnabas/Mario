@@ -9,6 +9,10 @@
                 <ResourceDictionary Source="Style/Colors.xaml"/>
                 <ResourceDictionary Source="Style/Buttons.xaml"/>
             </ResourceDictionary.MergedDictionaries>
+            
+            <ImageBrush x:Key="Cover" ImageSource="Images/cover.jpeg"/>
+            <BitmapImage x:Key="Title" UriSource="Images/felirat.png"/>
+            
         </ResourceDictionary>
     </Application.Resources>
 </Application>
