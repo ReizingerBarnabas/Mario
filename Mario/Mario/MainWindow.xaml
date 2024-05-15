@@ -11,7 +11,7 @@
         FontSize="20"
         Title="Mario's World Game" Height="450" Width="800" WindowState="Maximized" WindowStartupLocation="CenterScreen" WindowStyle="None">
     <Grid>
-        <!-- MENU BUTTON -->
+        <!-- Ádám -->
         <Button x:Name="BtnMenu"
                 Width="80"
                 Style="{StaticResource ControlButton}"
@@ -22,7 +22,7 @@
                 Panel.ZIndex="200"
                 Margin="10"/>
         
-        <!-- TOP MENU -->
+        <!-- Dávid -->
         <Grid Height="30"
               VerticalAlignment="Top"
               Margin="10"
@@ -35,10 +35,6 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             
-            
-            
-
-
             <!-- FIRST COLUMN - TIME -->
             <TextBlock x:Name="TimeDisplay"
                        Grid.Column="1"
@@ -57,7 +53,7 @@
             
         </Grid>
 
-        <!-- MENU -->
+        <!-- Barni -->
         <usercontrols:Menu x:Name="Menu"
                            Width="250"
                            Height="Auto"
@@ -66,8 +62,8 @@
                            Panel.ZIndex="200"
                            Visibility="Hidden">
         </usercontrols:Menu>
-        
-        
+
+        <!-- Ádám -->
         <Grid Background="{StaticResource Cover}"
               Panel.ZIndex="150"
               x:Name="StartScreen">
@@ -132,9 +128,9 @@
             
         </Grid>
 
-        
-         
+        <!-- Barni -->
         <TextBox Name="input" Height="0"  Width="100" Margin="115,32,585,352" TextChanged="input_TextChanged"/>
+        <!-- Dávid -->
         <StackPanel Name="stp">
              
 

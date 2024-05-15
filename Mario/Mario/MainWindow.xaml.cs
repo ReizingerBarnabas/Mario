@@ -60,6 +60,8 @@ namespace Mario
         private static int ml = -1200;
         private static int mr = 0;
         Image mario = new Image();
+
+        //Barni
         public async void input_TextChanged(object sender, TextChangedEventArgs e)
         {
             marioXX.Height = 0;
@@ -207,6 +209,7 @@ namespace Mario
             counter++;
         }
 
+        //Dávid
         public void CreateBlock(string block)
         {
             Image image = new Image();
@@ -226,7 +229,8 @@ namespace Mario
         public void CreateTurtle()
         {
         }
-
+        
+        //Ádám
         public void Read()
         {
             StreamReader olvas = new StreamReader(System.IO.Path.Combine(Directory.GetCurrentDirectory(), "field.txt"));
@@ -279,12 +283,16 @@ namespace Mario
             }
             olvas2.Close();
         }
+
+        //Barni
         public void play_Click(object sender, RoutedEventArgs e)
         {
             _ = Move();
             initializeFieldAndCharacters();
             StartTimer();
         }
+
+        //Ádám
         private void Timer_Tick(object sender, EventArgs e)
         {
             // Minden tick eseménynél növeljük az eltelt időt
@@ -294,6 +302,7 @@ namespace Mario
             TimeDisplay.Text = $"IDŐ: {elapsedTime.Minutes:D2}:{elapsedTime.Seconds:D2}";
         }
 
+        //Dávid
         public void StartTimer()
         {
             // Indítsd el az időzítőt és nullázd az eltelt időt
@@ -301,6 +310,7 @@ namespace Mario
             timer.Start(); // A timer elkezd számolni
         }
 
+        //Ádám
         public void initializeFieldAndCharacters()
         {
             marioXX.Height = 70;
@@ -326,6 +336,7 @@ namespace Mario
 
         private int i = 0;
 
+        //Barni
         private BitmapImage addBitmapImage(string key)
         {
             BitmapImage myBitmapImage = new BitmapImage();
@@ -340,6 +351,7 @@ namespace Mario
             //Menu.Visibility = Visibility.Visible;
         }
 
+        //Ádám
         private async Task Move()
         {
                 DispatcherTimer _timer;
@@ -415,16 +427,20 @@ namespace Mario
                     i++;
                 }, Application.Current.Dispatcher);
         }
+
+        //Dávid
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
             // Eseménykezelő logika, amely bezárja az ablakot
             //Close();
             Application.Current.Shutdown();
         }
+        //Barni
         private void btnMenu_Click(object sender, RoutedEventArgs e)
         {
             Menu.Visibility = Visibility.Visible;
         }
+        //Ádám
         public void backToGame_Click(object sender, RoutedEventArgs e)
         {
             Menu.Visibility = Visibility.Hidden;
@@ -432,6 +448,7 @@ namespace Mario
 
         private bool _isPlaying = false;
         private SoundPlayer _p;
+        //Dávid
         public void Music()
         {
             _p = new SoundPlayer("zene.wav");
@@ -439,6 +456,7 @@ namespace Mario
             _p.Play();
             _isPlaying = true;
         }
+        //Dávid
         private void MusicBtnStart_Click(object sender, RoutedEventArgs e)
         {
             // Ellenőrizd, hogy a lejátszó nem null és nem játszik
@@ -450,6 +468,7 @@ namespace Mario
             }
         }
 
+        //Barni
         private void MusicBtnStop_Click(object sender, RoutedEventArgs e)
         {
             // Ellenőrizd, hogy a lejátszó nem null és játszik
