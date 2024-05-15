@@ -41,6 +41,7 @@ namespace Mario
             timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromSeconds(1); // Minden másodpercben frissít
             timer.Tick += Timer_Tick;
+            Music();
         }
         private static int marioX = 8;
         private static int marioY = 5;
@@ -427,6 +428,36 @@ namespace Mario
         public void backToGame_Click(object sender, RoutedEventArgs e)
         {
             Menu.Visibility = Visibility.Hidden;
+        }
+
+        private bool _isPlaying = false;
+        private SoundPlayer _p;
+        public void Music()
+        {
+            _p = new SoundPlayer("zene.wav");
+            _p.Load();
+            _p.Play();
+            _isPlaying = true;
+        }
+        private void MusicBtnStart_Click(object sender, RoutedEventArgs e)
+        {
+            // Ellenőrizd, hogy a lejátszó nem null és nem játszik
+            if (!_isPlaying)
+            {
+                Music();
+                _p.Play();
+                _isPlaying = true;
+            }
+        }
+
+        private void MusicBtnStop_Click(object sender, RoutedEventArgs e)
+        {
+            // Ellenőrizd, hogy a lejátszó nem null és játszik
+            if (_isPlaying)
+            {
+                _p.Stop();
+                _isPlaying = false;
+            }
         }
     }
 }

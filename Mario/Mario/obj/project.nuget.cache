@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "a/GCw5kZE9da1Odo21vKaI3N0Ckz9WxhgfzrCl6mEEL/cc9u3rizpVYeh88L2MuVg6S6eqAKJxTm0vx1SaZxdQ==",
+  "dgSpecHash": "UwjKqptxNZWto0vGkTrC7sLwzzMfVVt7VDcclvDjVKD2UcJ7sMWdC7FvKEzFhy9f7zWyzQf0PkUIYqy51CAIAA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Adam\\RiderProjects\\Mario\\Mario\\Mario\\Mario.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Adam\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.27\\microsoft.netcore.app.ref.6.0.27.nupkg.sha512",
-    "C:\\Users\\Adam\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.27\\microsoft.windowsdesktop.app.ref.6.0.27.nupkg.sha512",
-    "C:\\Users\\Adam\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.27\\microsoft.aspnetcore.app.ref.6.0.27.nupkg.sha512",
-    "C:\\Users\\Adam\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.27\\microsoft.netcore.app.host.win-x64.6.0.27.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\rbarn\\source\\repos\\Mario\\Mario\\Mario\\Mario.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

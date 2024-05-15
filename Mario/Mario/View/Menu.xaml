@@ -30,19 +30,15 @@
                             Style="{StaticResource ControlButton}"/>
                     <StackPanel Orientation="Horizontal"
                                 HorizontalAlignment="Center">
-                        <Button x:Name="VolumeBtnMute"
-                                Content="MUTE"
-                                Width="50"
-                                Style="{StaticResource ControlButton}"/>
-                        <Button x:Name="VolumeBtnPlus"
-                                Content="+"
-                                Width="30"
-                                Style="{StaticResource ControlButton}"/>
-                        <Button x:Name="VolumeBtnMinus"
-                                Content="-"
-                                Width="30"
-                                Style="{StaticResource ControlButton}"/>
-                    </StackPanel>
+                    <Button x:Name="MusicBtnStart"
+            Content="START MUSIC"
+           
+            Style="{StaticResource ControlButton}"/>
+                    <Button x:Name="MusicBtnStop"
+            Content="STOP MUSIC"
+           
+            Style="{StaticResource ControlButton}"/>
+                </StackPanel>
                     <Button x:Name="BtnClose"
                             Content="EXIT"
                             Click="btnClose_Click"
