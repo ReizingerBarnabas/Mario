@@ -21,7 +21,7 @@ You can design your own levels! Before launching the game, you can modify the le
 * **W** - Jump
 * **A** - Move Left
 * **D** - Move Right
-* **S** - Crouch
+* **S** - Jump off
 
 ## 👥 Credits
 Developed with passion by:
