@@ -7,6 +7,8 @@ This game is a tribute to the original Super Mario, built from the ground up usi
 
 The goal of the game is simple but challenging: navigate through the obstacles, dodge the incoming turtles, and reach the top of the level to win!
 
+![alt text](/Mario/Mario/Images/portfolio.png "game")
+
 ## 🎮 Features
 * **Classic Gameplay:** Experience the nostalgic platformer feel.
 * **Challenging Enemies:** Watch out for the turtles! Collision will end your run.
@@ -16,6 +18,7 @@ The goal of the game is simple but challenging: navigate through the obstacles, 
 
 ## 🛠 Custom Level Design (Level Loader)
 You can design your own levels! Before launching the game, you can modify the level layout in a **`.txt` file**. Each character represents a specific element (e.g., walls, enemies, or the goal). This allows for endless replayability and creative map design.
+![alt text](/Mario/Mario/Images/field.png "field")
 
 ## ⌨️ Controls
 * **W** - Jump
@@ -28,4 +31,3 @@ Developed with passion by:
 * **Zámbó Ádám**
 * **Reizinger Barnabás**
 
-![alt text](/Mario/Mario/Images/portfolio.png "Title")
